@@ -75,7 +75,7 @@ export default function ReactionPanel() {
     const interval = setInterval(() => {
       setReactions(prev => prev.filter(r => {
         const age = Date.now() - parseInt(r.id.split('.')[0])
-        return age < 7000 // Keep reactions for 7 seconds
+        return age < 3500 // Keep reactions for 3.5 seconds (slightly longer than animation)
       }))
     }, 100)
     return () => clearInterval(interval)
@@ -103,25 +103,18 @@ export default function ReactionPanel() {
               }}
               animate={{ 
                 y: '-110vh',
-                opacity: [1, 1, 1, 1, 0.8, 0.3, 0],
-                scale: [0.5, 1, 1, 1, 1, 0.9, 0.8],
+                opacity: 0,
+                scale: 1,
               }}
               exit={{ 
                 opacity: 0
               }}
               transition={{ 
-                duration: 7,
+                duration: 3,
                 ease: "linear",
-                y: {
-                  duration: 7,
-                  ease: "linear"
-                },
-                opacity: {
-                  times: [0, 0.3, 0.6, 0.85, 0.92, 0.97, 1],
-                  ease: "linear"
-                },
                 scale: {
-                  times: [0, 0.15, 0.4, 0.85, 0.92, 0.97, 1],
+                  duration: 0.5,
+                  ease: "easeOut"
                 }
               }}
             >
