@@ -11,7 +11,7 @@ interface Reaction {
   isLocal?: boolean
 }
 
-const EMOJIS = ['😀', '😍', '🎉', '❤️', '🔥', '👏', '😂', '🤩', '💯', '🚀', '✨', '🙌', '🗑️', '💀']
+const EMOJIS = ['👍', '👎', '🔥', '💔', '🤯', '😭', '🤮', '💀']
 
 export default function ReactionPanel() {
   const [reactions, setReactions] = useState<Reaction[]>([])
@@ -140,13 +140,13 @@ export default function ReactionPanel() {
 
       {/* Reaction Buttons - Now positioned absolutely at bottom */}
       <div className="absolute bottom-0 left-0 right-0 bg-black/50 backdrop-blur-md border-t border-gray-800 p-3 safe-bottom pointer-events-auto">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-7 gap-1.5 sm:gap-2">
+        <div className="max-w-3xl mx-auto">
+          <div className="grid grid-cols-4 gap-2 sm:grid-cols-8 sm:gap-2">
             {EMOJIS.map((emoji) => (
               <motion.button
                 key={emoji}
                 onClick={() => addReaction(emoji)}
-                className="w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-3xl 
+                className="w-14 h-14 sm:w-12 sm:h-12 flex items-center justify-center text-3xl sm:text-3xl 
                          bg-gray-800 hover:bg-gray-700 active:bg-gray-600 rounded-lg sm:rounded-xl transition-all
                          border border-gray-700 hover:border-gray-600 touch-manipulation select-none"
                 whileHover={{ scale: 1.1 }}
