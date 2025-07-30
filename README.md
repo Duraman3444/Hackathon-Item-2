@@ -10,7 +10,7 @@ A real-time reaction panel app with animated emoji reactions, similar to Twitch 
 - 👥 **Multi-user support** - See reactions from all connected users in real-time
 - 🚀 Ready for Vercel deployment
 - ♾️ Infinite button clicks allowed
-- ⚖️ Balanced set of 8 positive and negative reactions
+- ⚖️ Balanced set of 10 emojis for diverse reactions
 
 ## Getting Started
 
@@ -75,10 +75,10 @@ vercel
 ## Available Emojis
 
 ### Positive Reactions
-👍 🔥 🤯 💀
+👍 ❤️ 🔥 🤯 💀
 
 ### Negative Reactions
-👎 💔 😭 🤮
+👎 💔 😭 🤮 🗑️
 
 ## Tech Stack
 
