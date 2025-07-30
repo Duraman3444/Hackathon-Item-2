@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0f0f0f;
+  color: white;
+  /* Prevent text selection and touch callouts */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  /* Prevent elastic scrolling on iOS */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* Prevent all touch actions except for buttons */
+* {
+  touch-action: none;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+/* Safe area support for iOS */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 12px);
+}
+
+/* Prevent double-tap zoom on buttons */
+button {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+} 
